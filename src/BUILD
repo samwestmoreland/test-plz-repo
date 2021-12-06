@@ -4,4 +4,9 @@ python_library(
         name = "add",
         srcs = ["foo.py"],
         visibility = ["PUBLIC"],
-        )
+)
+
+# genrule(
+#     name = "foo",
+#     cmd = ["echo 'Blah'"],
+# )

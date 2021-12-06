@@ -3,5 +3,5 @@
 github_repo(
     name = "python_rules",
     repo = "samwestmoreland/python-rules",
-    revision = "39f5ef44018e09e9b823d22fb68490df27013579",
+    revision = "e1edbf61d427a5867fcb371fd82e14187176e44d",
 )
