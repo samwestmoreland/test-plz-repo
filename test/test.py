@@ -1,4 +1,8 @@
 from src.foo import add_numbers
+import unittest
 
-def test_add():
-        assert add_numbers(2,4) == 6
+class UnittestTests(unittest.TestCase):
+
+
+    def test_add(self):
+        assert add_numbers(500, 3.4) == 503.4
