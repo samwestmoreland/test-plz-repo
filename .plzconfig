@@ -8,15 +8,19 @@
 ; [please]
 ; version = 16.2.1
 
-[Please]
-Version = 16.12.0
+;[Please]
+;Version = 16.12.0
 
 [Parse]
+PreloadSubincludes = ///cc_rules//build_defs:cc
 PreloadSubincludes = ///python_rules//build_defs:python
 
 [Plugin "python"]
 DefaultInterpreter = python3
 Testrunner = unittest
+
+[Plugin "cc"]
+subrepo = cc_rules
 
 [featureflags]
 ExcludePythonRules = true
