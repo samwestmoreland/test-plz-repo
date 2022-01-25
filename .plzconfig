@@ -12,15 +12,16 @@
 ;Version = 16.15.1
 
 [Parse]
-PreloadSubincludes = ///cc_rules//build_defs:cc
-PreloadSubincludes = ///python_rules//build_defs:python
+PreloadSubincludes = ///plugins/cc_rules//build_defs:cc
+PreloadSubincludes = ///plugins/python_rules//build_defs:python
 
 [Plugin "python"]
 DefaultInterpreter = python3
 Testrunner = unittest
+pextool = ///plugins/python_rules//tools/please_pex
 
 [Plugin "cc"]
-subrepo = cc_rules
+;subrepo = cc_rules
 
 [featureflags]
 ExcludePythonRules = true

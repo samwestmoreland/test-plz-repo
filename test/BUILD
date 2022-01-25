@@ -1,5 +1,5 @@
-python_test(
-    name = "foo",
-    srcs = ["test.py"],
-    deps = ["//src:add"],
-)
+# python_test(
+#     name = "foo",
+#     srcs = ["test.py"],
+#     deps = ["//src:add"],
+# )
