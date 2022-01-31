@@ -1,10 +1,22 @@
 # subinclude("@python_rules//build_defs:python")
 
-github_repo(
+# plugin_repo(
+#     name = "python_rules",
+#     plugin = "python-rules",
+#     revision = "1085dbffab7f9d8f2ebddd5d7555b074c907d3a3",
+#     owner = "please-build",
+# )
+
+subrepo(
     name = "python_rules",
-    repo = "samwestmoreland/python-rules",
-    revision = "b3a8e21c0fd5ce629e54bbe96ee75d11e4af1634",
-)
+    dep = build_rule(
+            name = "python_rules",
+            system_srcs = ["/home/swestmoreland/python-rules"],
+            cmd = "cp -r /home/swestmoreland/python-rules $OUT",
+            outs = ["python_rules"],
+            _subrepo = True,
+        ),
+) 
 
 # github_repo(
 #     name = "cc_rules",
