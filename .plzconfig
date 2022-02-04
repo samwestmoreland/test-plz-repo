@@ -21,26 +21,5 @@ PreloadSubincludes = ///plugins/python_rules//build_defs:python
 pextool = //tools/please_pex                                                      
 moduledir = third_party.python                                                    
 
-[Plugin "python"]
-DefaultInterpreter = python3
-Testrunner = unittest
-PexTool = @self//tools/please_pex:please_pex
-InterpreterOptions = 
-TestRunner = unittest
-TestrunnerDeps = //third_party/python:unittest_bootstrap
-Debugger = pdb
-ModuleDir = third_party.python
-PipTool = 
-DefaultPipRepo = 
-UsePypi = true
-PipFlags = 
-DisableVendorFlags = false
-WheelRepo = true
-WheelNameScheme = true
-WheelTool = //tools/wheel_resolver
-
-[Plugin "cc"]
-;subrepo = cc_rules
-
 [featureflags]
 ExcludePythonRules = true
