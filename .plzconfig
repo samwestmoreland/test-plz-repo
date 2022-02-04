@@ -24,7 +24,6 @@ moduledir = third_party.python
 [Plugin "python"]
 DefaultInterpreter = python3
 Testrunner = unittest
-pextool = ///plugins/python_rules//tools/please_pex
 PexTool = @self//tools/please_pex:please_pex
 InterpreterOptions = 
 TestRunner = unittest
