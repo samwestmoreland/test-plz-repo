@@ -40,3 +40,10 @@ subrepo(
 #     revision = "",
 #     owner = "samwestmoreland",
 # )
+
+plugin_repo(
+  name = "python",
+  revision = "v0.2.0",
+  plugin = "python-rules",
+  owner = "please-build",
+)

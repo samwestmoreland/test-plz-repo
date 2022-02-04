@@ -15,10 +15,30 @@
 PreloadSubincludes = ///plugins/cc_rules//build_defs:cc
 PreloadSubincludes = ///plugins/python_rules//build_defs:python
 
+[python]                                                                          
+; We use the in-repo please_pex tool to build other pexes within this repo.       
+; Other projects using Please wouldn't normally need to do anything like this.    
+pextool = //tools/please_pex                                                      
+moduledir = third_party.python                                                    
+
 [Plugin "python"]
 DefaultInterpreter = python3
 Testrunner = unittest
 pextool = ///plugins/python_rules//tools/please_pex
+PexTool = @self//tools/please_pex:please_pex
+InterpreterOptions = 
+TestRunner = unittest
+TestrunnerDeps = //third_party/python:unittest_bootstrap
+Debugger = pdb
+ModuleDir = third_party.python
+PipTool = 
+DefaultPipRepo = 
+UsePypi = true
+PipFlags = 
+DisableVendorFlags = false
+WheelRepo = true
+WheelNameScheme = true
+WheelTool = //tools/wheel_resolver
 
 [Plugin "cc"]
 ;subrepo = cc_rules
